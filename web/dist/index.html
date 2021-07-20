@@ -1,0 +1,22 @@
+<script>
+	window.RufflePlayer = window.RufflePlayer || {};
+	window.addEventListener("load", (event) => {
+		const ruffle = window.RufflePlayer.newest();
+		const player = ruffle.createPlayer();
+		const container = document.getElementById("container");
+		container.appendChild(player);
+		player.load("game.swf");
+		console.dir(player)
+	});
+
+	document.onkeydown = (...args) => {
+		console.log(args)
+	}
+
+</script>
+<script src="ruffle.js"></script>
+
+<body id="container">
+
+
+</body>
